@@ -1,0 +1,4 @@
+Makefile
+sw
+sw.c
+tmpfile.txt
