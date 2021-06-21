@@ -41,7 +41,6 @@ int main()
 		s2 = accept(s,(struct sockaddr *) &remote, &len);
 		if(fork()) continue; 
 		if (s2 == -1) {perror("Accept Fallita\n"); return 1;}
-
 		j=0;k=0;
 		h[k].n = request;
 		while(read(s2,request+j,1)){
@@ -64,7 +63,7 @@ int main()
 		version = request+i+1;
 
 		printf("Method = %s, path = %s , version = %s\n",method,path,version);	
-		if(!strcmp("GET",method)){ 
+		if(!strcmp("GET",method)){ // GET == method
 			//  http://www.google.com/path
 			scheme=path;
 			for(i=0;path[i]!=':';i++); path[i]=0;
