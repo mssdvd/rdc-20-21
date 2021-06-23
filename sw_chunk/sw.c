@@ -51,9 +51,7 @@ int main()
 			write(s2,response,strlen(response));
 		}
 		else {
-			sprintf(response,"HTTP/1.1 200 OK\r\n");
-			write(s2,response,strlen(response));
-			sprintf(response,"Transfer-Encoding: chunked\r\n\r\n");
+			sprintf(response,"HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\n\r\n");
 			write(s2,response,strlen(response));
 
 			/* File length */
