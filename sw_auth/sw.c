@@ -57,7 +57,7 @@ int main()
 		for(i=1;i<k;i++){
 			printf("%s ----> %s\n",h[i].n, h[i].v);
 
-			if (strcmp(h[i].n, "Authentication") == 0) {
+			if (strcmp(h[i].n, "Authorization") == 0) {
 				if (strncmp(h[i].v, " Basic", 6) == 0) {
 					auth_str = h[i].v + 7;
 				}
