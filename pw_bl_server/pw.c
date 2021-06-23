@@ -81,6 +81,8 @@ int main()
 			server.sin_port=htons(80);
 			server.sin_addr.s_addr=*(unsigned int*) he->h_addr;	
 
+			// TODO: Implementeare whitelist anche per GET
+			//       Farlo per connect non è sufficiente
 
 			t=connect(s3,(struct sockaddr *)&server,sizeof(struct sockaddr_in));		
 			if(t==-1){perror("Connect to server fallita"); return 1;}
