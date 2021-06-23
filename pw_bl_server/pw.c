@@ -108,7 +108,7 @@ int main()
 			server.sin_addr.s_addr=*(unsigned int*) he->h_addr;			
 
 
-			unsigned int whitelist[4][4] = {
+			char whitelist[4][4] = {
 				{ 88, 80, 187, 84 },
 				{ 1, 1, 1, 1 },
 				{ 172, 217, 23, 110 },
