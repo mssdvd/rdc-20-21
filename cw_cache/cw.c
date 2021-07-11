@@ -105,7 +105,7 @@ int main() {
 	time_t cached_epoch = 0;
 	
 	if (fo) {
-		char *cached_time = 0; size_t len = 0;
+		char *cached_time = malloc(100); size_t len = 100;
 		getline(&cached_time, &len, fo);
 		fclose(fo);
 		cached_epoch = atol(cached_time);
